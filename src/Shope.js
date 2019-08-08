@@ -19,9 +19,9 @@ function Shope() {
   return (
     <div className="App">
       {items.map(item => (
-        <h1 key={item.itemid}>
+        <h3 key={item.itemid}>
           <Link to={`/shop/${item.itemid}`}>{item.name}</Link>
-        </h1>
+        </h3>
       ))}
     </div>
   );

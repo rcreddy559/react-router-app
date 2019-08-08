@@ -4,11 +4,11 @@ import Nav from "./Nav";
 import Shope from "./Shope";
 import ItemDetails from "./ItemDetails";
 import About from "./About";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { BrowserRouter, Switch, Route } from "react-router-dom";
 
 function App() {
   return (
-    <Router>
+    <BrowserRouter>
       <div className="App">
         <Nav />
         <Switch>
@@ -18,7 +18,7 @@ function App() {
           <Route path="/shop/:id" component={ItemDetails} />
         </Switch>
       </div>
-    </Router>
+    </BrowserRouter>
   );
 }
 
