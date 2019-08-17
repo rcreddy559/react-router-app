@@ -3,8 +3,9 @@ import "./App.css";
 import Nav from "./Nav";
 import Shope from "./Shope";
 import ItemDetails from "./ItemDetails";
-import About from "./About";
+import About from "./components/About";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
+import Home from "./components/Home";
 
 function App() {
   return (
@@ -21,11 +22,5 @@ function App() {
     </BrowserRouter>
   );
 }
-
-const Home = () => (
-  <div>
-    <h1>Home</h1>
-  </div>
-);
 
 export default App;
