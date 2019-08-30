@@ -9,11 +9,17 @@ function Nav() {
     <nav>
       <h3>Nav</h3>
       <ul className="nav-links">
+        <Link to="/" style={navStyle}>
+          <li>Home</li>
+        </Link>
         <Link to="/about" style={navStyle}>
           <li>About</li>
         </Link>
         <Link to="/shop" style={navStyle}>
           <li>Shop</li>
+        </Link>
+        <Link to="/useReducer" style={navStyle}>
+          <li>useReducer</li>
         </Link>
       </ul>
     </nav>

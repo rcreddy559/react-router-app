@@ -1,12 +1,15 @@
 import React, { useRef, useEffect, useState } from "react";
+import TodosApp from "./hooks/todospp";
 
 function Home() {
-  const [buttonText, setButtonText] = useState("Click");
-
+  const initialCount = 10;
   const firstNameRef = useRef(null);
   const lastNameRef = useRef(null);
   const submitRef = useRef(null);
   const message = useRef(null);
+
+  const [buttonText, setButtonText] = useState("Click");
+  const [count, setCount] = useState(initialCount);
 
   useEffect(() => {
     firstNameRef.current.focus();
@@ -30,9 +33,7 @@ function Home() {
   const submitNameDown = e => {
     if (e.key === "Enter") {
       console.log(
-        `Hello ${firstNameRef.current.value}, ${
-          lastNameRef.current.value
-        }, Thanks for submitting your details!`
+        `Hello ${firstNameRef.current.value}, ${lastNameRef.current.value}, Thanks for submitting your details!`
       );
 
       setButtonText("Submitted");
@@ -43,7 +44,7 @@ function Home() {
     <div>
       <h1>Home</h1>
       <div ref={message} />
-      <div>
+      <div className="user">
         <label>First Name:</label>
 
         <input
@@ -53,20 +54,33 @@ function Home() {
           onKeyDown={firstNameDown}
         />
       </div>
-      <div>
+      <div className="user">
         <label>Last Name:</label>
         <input
           type="text"
-          placeholder="First Name"
+          placeholder="Last Name"
           ref={lastNameRef}
           onKeyDown={lastNameDown}
         />
         <div>
-          <button ref={submitRef} onKeyDown={submitNameDown}>
+          <button ref={submitRef} onKeyDown={submitNameDown} className="submit">
             {buttonText}
           </button>
         </div>
       </div>
+      <p>
+        <div className="count">
+          Count: {count}
+          <button onClick={() => setCount(initialCount)}>Reset</button>
+          <button onClick={() => setCount(prevCount => prevCount + 1)}>
+            +
+          </button>
+          <button onClick={() => setCount(prevCount => prevCount - 1)}>
+            -
+          </button>
+        </div>
+      </p>
+      <TodosApp></TodosApp>
     </div>
   );
 }

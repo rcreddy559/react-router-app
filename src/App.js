@@ -6,6 +6,7 @@ import ItemDetails from "./ItemDetails";
 import About from "./components/About";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 import Home from "./components/Home";
+import TodosApp from "./components/hooks/todospp";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
           <Route path="/about" component={About} />
           <Route path="/shop" exact component={Shope} />
           <Route path="/shop/:id" component={ItemDetails} />
+          <Route path="/useReducer" component={TodosApp} />
         </Switch>
       </div>
     </BrowserRouter>

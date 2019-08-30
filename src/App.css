@@ -18,3 +18,19 @@ nav {
   justify-content: space-around;
   align-items: center;
 }
+
+.count button {
+  margin-left: 10px;
+}
+
+.user input {
+  margin-left: 10px;
+}
+
+.submit {
+  margin-top: 10px;
+}
+
+input {
+  margin-top: 10px;
+}
