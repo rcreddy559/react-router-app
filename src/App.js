@@ -7,6 +7,7 @@ import About from "./components/About";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 import Home from "./components/Home";
 import TodosApp from "./components/hooks/todospp";
+import CounterWithReducer from "./components/hooks/CounterWithReducer";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
           <Route path="/shop" exact component={Shope} />
           <Route path="/shop/:id" component={ItemDetails} />
           <Route path="/useReducer" component={TodosApp} />
+          <Route path="/counterWithReducer" component={CounterWithReducer} />
         </Switch>
       </div>
     </BrowserRouter>

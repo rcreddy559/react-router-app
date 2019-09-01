@@ -19,7 +19,10 @@ function Nav() {
           <li>Shop</li>
         </Link>
         <Link to="/useReducer" style={navStyle}>
-          <li>useReducer</li>
+          <li>use Reducer</li>
+        </Link>
+        <Link to="/counterWithReducer" style={navStyle}>
+          <li>CounterWithReducer</li>
         </Link>
       </ul>
     </nav>

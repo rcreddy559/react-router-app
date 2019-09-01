@@ -12,9 +12,7 @@ function ItemDetails({ match }) {
 
   const fetchItem = async () => {
     const fetchItem = await fetch(
-      `https://fortnite-public-api.theapinetwork.com/prod09/item/get?ids=${
-        match.params.id
-      }`
+      `https://fortnite-public-api.theapinetwork.com/prod09/item/get?ids=${match.params.id}`
     ).then(res => res.json());
     setItem(fetchItem);
   };
