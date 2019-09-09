@@ -1,4 +1,5 @@
 import React, { useReducer } from "react";
+import AddWithReducer from "./AddWithReducer";
 
 const initialState = { count: 0 };
 
@@ -27,6 +28,8 @@ export default function CounterWithReducer() {
         </button>
         <button onClick={() => dispatch({ type: "Derement" })}>Derement</button>
       </div>
+      <hr />
+      <AddWithReducer></AddWithReducer>
     </div>
   );
 }
